@@ -13,7 +13,7 @@ object ac5 extends App {
 
   var ds = xs.updated(225,1)
   var p = 2
-
+/*
   while(p<ds.length){
     val t = ins(ds(p))
     println(t)
@@ -33,7 +33,7 @@ object ac5 extends App {
       )
       p = p + 4
     }
-  }
+  }*/
 
 
 }

@@ -16,23 +16,22 @@ object ac3 extends App {
     }
   }
 
-  val wires1 = lines.next().split(",").toList.foldLeft(List((0,0)))((a, b)=>{
+  val wires1 = lines.next().split(",").toList.foldLeft(List((0, 0)))((a, b) => {
     val pattern(dir, step) = b
-    a ++ f(a.last,step.toInt,dir)
+    a ++ f(a.last, step.toInt, dir)
   })
 
-  val wires2 = lines.next().split(",").toList.foldLeft(List((0,0)))((a, b)=>{
+  val wires2 = lines.next().split(",").toList.foldLeft(List((0, 0)))((a, b) => {
     val pattern(dir, step) = b
-    a ++ f(a.last,step.toInt,dir)
+    a ++ f(a.last, step.toInt, dir)
   })
 
 
-  println(wires1.intersect(wires2).tail.minBy(x=>Math.abs(x._1)+Math.abs(x._2)))
+  println(wires1.intersect(wires2).tail.minBy(x => Math.abs(x._1) + Math.abs(x._2)))
 
   val t = wires1.intersect(wires2).tail.minBy(x => wires1.indexOf(x) + wires2.indexOf(x))
 
-  println(wires1.indexOf(t)+wires2.indexOf(t))
-
+  println(wires1.indexOf(t) + wires2.indexOf(t))
 
 
 }
