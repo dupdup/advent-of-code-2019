@@ -2,7 +2,7 @@ import scala.io.Source
 
 object ac3 extends App {
 
-  val filename = "in3_1"
+  val filename = "input/in3_1"
   private val lines = Source.fromFile(filename).getLines
   val pattern = "([A-Z])([0-9]+)".r
 
