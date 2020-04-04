@@ -3,7 +3,7 @@ import scala.io.Source
 
 object ac1 extends App {
 
-  val filename = "in1_1"
+  val filename = "input/in1_1"
   val xs = for (
     line <- Source.fromFile(filename).getLines
   ) yield line.toInt
