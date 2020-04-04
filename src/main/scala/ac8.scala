@@ -2,7 +2,7 @@ import scala.io.Source
 
 object ac8 extends App {
 
-  private val lines = Source.fromFile("in8").getLines.next().split("").toList.grouped(150).toList
+  private val lines = Source.fromFile("input/in8").getLines.next().split("").toList.grouped(150).toList
   val min = lines.minBy(_ count ("0".equals))
   println(min.count("2".equals) * min.count("1".equals))
 
