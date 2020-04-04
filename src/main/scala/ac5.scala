@@ -2,7 +2,7 @@ import scala.io.Source
 
 object ac5 extends App {
 
-  val filename = "in5_1"
+  val filename = "input/in5_1"
   val xs = Source.fromFile(filename).getLines.next().split(",").map(_.toInt).toList
 
 
