@@ -4,7 +4,7 @@ object ac6 extends App {
 
   case class Orbit(from: String, to: String)
 
-  private val lines = Source.fromFile("in6_1").getLines
+  private val lines = Source.fromFile("input/in6_1").getLines
   val xs = lines.map(_.split("\\)") match { case Array(a: String, b: String) => Orbit(a, b) }).toList
 
   val adam = xs.filterNot(x => xs.map(_.to).contains(x.from))
