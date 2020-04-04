@@ -2,7 +2,7 @@
 import scala.io.Source
 
 object ac2 extends App {
-  val filename = "in2_1"
+  val filename = "input/in2_1"
   val ds = Source.fromFile(filename).getLines.next().split(",").map(_.toInt).toList
   val range = Range(0, 100)
 
